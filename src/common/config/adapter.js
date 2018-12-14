@@ -1,3 +1,11 @@
+/*
+ * @Description: In User Settings Edit
+ * @Author: pxf
+ * @Date: 2018-11-27 10:35:13
+ * @LastEditTime: 2018-12-14 17:04:21
+ * @LastEditors: Please set LastEditors
+ */
+
 const fileCache = require('think-cache-file');
 const nunjucks = require('think-view-nunjucks');
 const fileSession = require('think-session-file');
@@ -8,7 +16,7 @@ const isDev = think.env === 'development';
 const ws = require('think-websocket-ws');
 
 /**
- * cache adapter config
+ * cache adapter config 缓存适配器配置
  * @type {Object}
  */
 exports.cache = {
@@ -38,13 +46,13 @@ exports.model = {
   mysql: {
     handle: mysql,
     database: 'healthcare',
-    prefix: 'think_',
-    encoding: 'utf8',
+    prefix: '',
+    encoding: 'utf-8',
     host: 'localhost',
     port: '3306',
     user: 'root',
     password: '123456',
-    dateStrings: true
+    //dateStrings: true  ///把这个地方注释掉，我往数据库提交数据就不会出错了？？！！！要哭了！
   }
 };
 
