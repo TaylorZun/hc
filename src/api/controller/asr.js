@@ -2,7 +2,7 @@
  * @Description: 语音识别 Automic speech recognition
  * @Author: pxf
  * @Date: 2018-12-17 16:42:55
- * @LastEditTime: 2018-12-18 17:50:22
+ * @LastEditTime: 2018-12-18 18:04:13
  * @LastEditors: Please set LastEditors
  * 
  */
@@ -26,7 +26,8 @@ module.exports = class extends Base {
         //新建一个对象，建议只保存一个对象调用服务接口
         const client = new AipSpeechServer(APP_ID, API_KEY, SECRET_KEY)
         const voice = this.file()
-        const uploadedPath = voice.path
+        console.log(voice)
+        const uploadedPath = voice.file.File.path
         const command = ffmpeg()
         command.addInput(uploadedPath)
             .saveToFile('../../runtime/upload/audio/16k.wav')
