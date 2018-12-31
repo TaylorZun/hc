@@ -2,7 +2,7 @@
  * @Description: 关于医师咨询的相关的查询
  * @Author: your name
  * @Date: 2018-12-23 14:17:21
- * @LastEditTime: 2018-12-24 17:16:53
+ * @LastEditTime: 2018-12-31 14:54:37
  * @LastEditors: Please set LastEditors
  */
 
@@ -26,4 +26,8 @@ module.exports = class extends Base {
             info: info
         })
     }
+
+  
+
+    
 }
