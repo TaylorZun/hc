@@ -2,7 +2,7 @@
  * @Description: 关于血糖的数据
  * @Author: pxf
  * @Date: 2018-12-08 17:03:19
- * @LastEditTime: 2018-12-29 19:02:24
+ * @LastEditTime: 2019-01-04 15:50:50
  * @LastEditors: Please set LastEditors
  */
 
@@ -35,6 +35,11 @@ module.exports = class extends Base {
         }
     }
     
+    async getsugarAction(){
+        const model = this.model('sugardata')
+        const sugar = await model.order('id DESC').select()
+        return this.success(sugar)
+    }
     /**
      * 对血糖数据分析处理
      */
