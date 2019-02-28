@@ -2,7 +2,7 @@
  * @Description: 关于医师咨询的相关的查询
  * @Author: your name
  * @Date: 2018-12-23 14:17:21
- * @LastEditTime: 2019-01-03 10:17:47
+ * @LastEditTime: 2019-02-25 01:06:25
  * @LastEditors: Please set LastEditors
  */
 
@@ -16,6 +16,14 @@ module.exports = class extends Base {
         return this.success(doctorList)
         
     }
+
+    async getdoctorlist1Action() {
+        const zhicheng = this.get('zhicheng')
+        const model = this.model('doctor')
+        const info = await model.where({'zhicheng':zhicheng}).find()
+        return this.success(info)
+    }
+
     
     async getdoctordetailAction() {
         const doctorid = this.get('id')
