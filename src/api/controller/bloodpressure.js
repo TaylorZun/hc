@@ -2,7 +2,7 @@
  * @Description: 后台血压管理
  * @Author: pxf
  * @Date: 2018-12-21 11:32:13
- * @LastEditTime: 2019-01-02 10:34:43
+ * @LastEditTime: 2019-03-07 22:15:46
  * @LastEditors: Please set LastEditors
  */
 
@@ -31,4 +31,6 @@ module.exports = class extends Base {
         const result = await model.select()
         return this.success(result)
     }
+
+    
 }
